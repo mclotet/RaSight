@@ -3,16 +3,16 @@ plugins {
 }
 
 android {
-    compileSdk 34
+    compileSdk = 34
 
     defaultConfig {
-        applicationId "com.ffalcon.mercury.android.sdk"
-        minSdk 31
-        targetSdk 34
-        versionCode 1
-        versionName "1.0"
+        applicationId = "com.ffalcon.mercury.android.sdk"
+        minSdk = 31
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     signingConfigs {
         create("xr2") {
@@ -25,23 +25,21 @@ android {
     buildTypes {
 
         debug {
-            minifyEnabled false
+            minifyEnabled = false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig = signingConfigs.getByName("xr2")
-
         }
 
         release {
-            minifyEnabled false
+            minifyEnabled = false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig = signingConfigs.getByName("xr2")
-
         }
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlin {
         compilerOptions {
